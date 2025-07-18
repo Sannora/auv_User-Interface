@@ -1,0 +1,52 @@
+.vertical-slider-container {
+  width: 60px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 32px;
+  user-select: none;
+}
+
+.vertical-slider-track {
+  position: relative;
+  width: 8px;
+  height: 100%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.tick {
+  position: absolute;
+  left: 2px;
+  width: 16px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.tick.minor {
+  width: 16px;
+}
+
+.tick.major {
+  width: 32px;
+}
+
+.label {
+  position: absolute;
+  left: 36px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.angle-indicator {
+  position: absolute;
+  left: 40px;
+  transform: translateY(-50%);
+  background-color: #222;
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}

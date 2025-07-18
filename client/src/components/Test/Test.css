@@ -1,0 +1,429 @@
+.component-test {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 64px 8px;
+    background-color: #212529;
+}
+
+.camera-container {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    border-radius: 8px;
+    background-color: #495057;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.camera-left{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 8px;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%);
+}
+
+.temperature{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFF;
+    
+}
+
+.camera-right {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 8px;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 90%);
+}
+
+.camera-status{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.camera-utility-buttons{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgba(248, 249, 250, 0.5);
+}
+
+.camera-utility-button{
+    color: #212529;
+    font-size: 16px;
+}
+
+.camera-engines{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 8px;
+}
+
+.camera-engines-heading{
+    width: 100%;
+    text-align: end;
+    color: #FFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.camera-engines-display{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 4px;
+}
+
+.camera-engine-unit{
+    width: 16px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid #212529;
+    background-color: #495057;
+}
+
+.camera-engine-unit + .camera-engine-unit {
+    margin-left: 4px;
+}
+
+.camera-engine-unit.active {
+    background-color: #AAFF00;
+    border-color: #212529;
+}
+
+.vehicle-utils-container {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 64px 0px;
+}
+
+.control-pad-container {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #6C757D;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.control-pad {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 4px #000;
+    background-color: #343A40;
+    position: relative;
+}
+
+.control-analog {
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #6C757D;
+    box-shadow: 1px 1px 20px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: transform 0.1s ease-out;
+}
+
+.control-button {
+    position: absolute;
+    width: 18%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 13px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Cardinal directions */
+.button-forward {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.button-backward {
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.button-left {
+    left: 5%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.button-right {
+    right: 5%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.auxiliary-buttons-container {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #6C757D;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.auxiliary-buttons-grid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+}
+
+.auxiliary-button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 16px;
+    background-color: #343A40;
+    color: #FFF;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.control-button.active {
+    border-radius: 4px;
+    padding: 2px;
+    background-color: #ADB5BD;
+    color: #212529;
+    box-shadow: 0 0 2px #F8F9FA;
+    transition: 0.1s ease-in-out;
+}
+
+.engine-controls-container {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin: 0px 4px;
+    border-radius: 8px;
+    background-color: #6C757D;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.engine-thumb {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #000;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+.engine-controls-heading {
+    width: 100%;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFF;
+}
+
+.engine-units-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.engine-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.engine-progress-container {
+    width: 16px;
+    height: 160px;
+    position: relative;
+    background-color: #495057;
+    box-shadow: inset 1px 1px 4px #000;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.engine-progress-up {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    background: linear-gradient(to top, #aaff00, #00ff00);
+    transition: height 0.2s ease;
+    z-index: 1;
+}
+
+.engine-progress-down {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    background: linear-gradient(to bottom, #ff0000, #8b0000);
+    transition: height 0.2s ease;
+    z-index: 1;
+}
+
+.engine-thumb {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 8px;
+    border-radius: 4px ;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.engine-name {
+    padding-top: 8px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #FFF;
+}
+
+
+/* Desktop Responsive Query */
+@media screen and (min-width: 768px) {
+    .component-test {
+        padding: 48px 16px;
+    }
+
+    .camera-container {
+        height: 60%;
+    }
+
+    .camera-status{
+        width: 25%;
+    }
+
+    .vehicle-utils-container {
+        height: 35%;
+        padding: 16px 0px;
+    }
+
+    .control-pad {
+        width: 50%;
+    }
+
+    .control-button {
+        width: 17.5%;
+        font-size: 16px;
+    }
+
+    .engine-controls-container {
+        padding: 8px 24px;
+        margin: 0px 24px;
+        border-radius: 8px;
+        background-color: #6C757D;
+    }
+
+    .engine-controls-heading {
+        font-size: 24px;
+    }
+    
+    .engine-progress-container {
+        width: 24px;
+        height: 140px;
+        border-radius: 8px;
+    }
+    
+    .engine-thumb {
+        width: 32px;
+        height: 8px;
+        border-radius: 4px;
+    }
+    
+    .engine-name {
+        font-size: 16px;
+    }
+
+    .auxiliary-buttons-grid{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .auxiliary-button {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        padding: 2px 16px;
+    }
+
+    .control-button.active {
+        box-shadow: 0 0 20px #F8F9FA;
+    }
+}

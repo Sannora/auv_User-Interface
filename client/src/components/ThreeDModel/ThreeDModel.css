@@ -1,0 +1,40 @@
+.scene-container{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: grab;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.scene-container:hover{
+    opacity: 1;
+}
+
+.canvas-container{
+    width: 100%;
+    height: 100%;
+}
+
+.three-d-canvas{
+    width: 100%;
+    height: 100%;
+}
+
+.inputs{
+    display: none;
+}
+
+/* Desktop Responsive Query */
+@media screen and (min-width: 768px) {
+
+.scene-container{
+    width: 30%;
+    height: 100px;
+    top: 30%;
+    left: -65%;
+    border-radius: 8px;
+}
+
+}

@@ -1,0 +1,140 @@
+.component-system-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.system-details-heading{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 16px;
+    background-color: #343A40;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFF;
+}
+
+.system-details-container{
+    width: 100%;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+.system-details-unit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 4px 8px;
+    background-color: #DEE2E6;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #141414;
+}
+
+.system-details-unit:nth-child(even){
+    background-color: #6C757D;
+    color: #FFF;
+}
+
+.system-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.system-detail-icon{
+    margin-right: 8px;
+}
+
+.system-details-photo-dropdown-toggle{
+    cursor: pointer;
+}
+
+.captured-photos-open, .captured-photos-closed{
+    display: none;
+}
+
+.icon-dropdown{
+    display: none;
+    font-size: 24px;
+    color: #343A40;
+    transition: 0.3s;
+}
+
+.icon-dropdown:hover{
+    color: #212529;
+}
+
+.icon-dropdown:active{
+    color: #AAFF00;
+}
+
+/* Desktop Responsive Query */
+@media screen and (min-width: 768px) {
+
+.component-system-details{
+    margin-top: 40px;
+}
+
+.system-details-heading{
+    padding: 8px 16px;
+    font-size: 24px;
+}
+
+.system-details-container{
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+.system-details-unit{
+    padding: 8px;
+    font-size: 16px;
+}
+
+.icon-dropdown{
+    display: block;
+}
+
+.captured-photos{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+.captured-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+
+.captured-photos-open{
+    visibility: visible;
+    width: 100%;
+    height: 100px;
+    background-color: #CED4DA;
+}
+
+.captured-photos-closed{
+    width: 100%;
+    height: 100px;
+    visibility: hidden;
+}
+
+.system-detail-mobile{
+    display: none;
+}
+
+}

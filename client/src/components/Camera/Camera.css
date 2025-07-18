@@ -1,0 +1,11 @@
+.camera-component-container{
+    width: 100%;
+    height: 100%;
+}
+
+.camera-component-container img{
+    width: 142%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}

@@ -1,0 +1,141 @@
+.section-login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-left{
+    display: none;
+}
+
+.login-right{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #DEE2E6;
+}
+
+.icon-login{
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 16px;
+    background-color: #FFF;
+    margin-bottom: 16px;
+}
+
+.text-login{
+    font-family: "Roboto", sans-serif;
+    color: #141414;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.form-login{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.input-login{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #E9ECEF;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.input-login + .input-login{
+    margin-top: 24px;
+}
+
+.input-login::placeholder{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #ADB5BD;
+}
+
+.button-login{
+    width: 100%;
+    padding: 8px 32px;
+    margin-top: 32px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #343A40;
+    color: #FFF;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-login:hover{
+    background-color: #212529;
+}
+
+/* Desktop Responsive Query */
+@media screen and (min-width: 768px) {
+
+.section-login{
+    flex-direction: row;
+}
+
+.login-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 2 1 50%;
+    background-color: #212529;
+}
+
+.image-login{
+    height: 25%;
+    flex: 2 1 auto;
+}
+
+.login-right{
+    flex: 2 1 50%;
+}
+
+.icon-login{
+    margin-bottom: 8px;
+}
+
+.text-login{
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.form-login{
+    width: 40%;
+    margin-bottom: 24px;
+}
+
+.input-login{
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.input-login + .input-login{
+    margin-top: 16px;
+}
+
+.button-login{
+    padding: 8px 48px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 24px;
+}
+
+}
