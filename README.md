@@ -132,3 +132,6 @@ Description: Sends a command to the ROV via ZeroMQ.
 
 Contact
 For questions or support, please open an issue or contact mmh.melih@gmail.com.
+
+Control System:
+- [elymsyr/auv_control_system](https://github.com/elymsyr/auv_control_system)
